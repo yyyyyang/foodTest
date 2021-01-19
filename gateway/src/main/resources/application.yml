@@ -32,6 +32,10 @@ spring:
           uri: http://localhost:8089
           predicates:
             - Path=/kitchens/**
+        - id: review
+          uri: http://localhost:8087
+          predicates:
+            - Path=/reviews/** /reviewViews/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -75,6 +79,10 @@ spring:
           uri: http://kitchen:8080
           predicates:
             - Path=/kitchens/**
+        - id: review
+          uri: http://review:8080
+          predicates:
+            - Path=/reviews/** /reviewViews/**
       globalcors:
         corsConfigurations:
           '[/**]':
